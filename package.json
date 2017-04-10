@@ -136,5 +136,8 @@
     "uglify-js": "^2.8.12",
     "watchify": "^3.9.0",
     "xml2js": "^0.4.16"
+  },
+  "publishConfig":{
+    "registry":"https://h3biomedicine.jfrog.io/h3biomedicine/api/npm/h3-npm"
   }
 }

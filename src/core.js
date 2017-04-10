@@ -18,7 +18,8 @@ var Plotly = require('./plotly');
 exports.version = '1.25.2';
 
 // inject promise polyfill
-require('es6-promise').polyfill();
+// REMOVED IN THE H3BIOMED FORK
+//require('es6-promise').polyfill();
 
 // inject plot css
 require('../build/plotcss');
