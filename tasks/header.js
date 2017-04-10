@@ -66,6 +66,7 @@ function updateHeadersInSrcFiles() {
                 }
 
                 // if header and license are the same, do nothing
+              header.value = header.value.replace(/\r/g, ""); // ADDED FOR H3BIOMED: GET RID OF WINDOWS CARRIAGE RETURNS
                 if(isCorrect(header)) return;
 
                 // if header and license only differ by date, update header
