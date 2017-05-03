@@ -7,6 +7,18 @@
 1.  Commented out require(e6-promises) in src/core.js
 2.  Replaced \r\n with \n in tasks/header.js
 
+### Updating or pulling from upstream plotly
+
+* Pull from upstream: git pull upstream/master. (try to do this from webstorm to make merge conflicts easier)
+* Change the version number (this will be a conflict) in package.json
+* Commit but DO NOT check "Reformat code" or "Rearrange code"
+* Make sure it still builds with npm run build. Possible needed changes:
+    - If `npm run header` fails, it may be that the webstorm commit added blank spaces in the headers. Revert what you can to a previous commit. 
+    - If `npm run stats` fails with `ENOENT`, leave it; it's not needed
+* If it builds, then tag, commit, push, and publish to artifactory
+
+---
+
 Built on top of [d3.js](http://d3js.org/) and [stack.gl](http://stack.gl/),
 plotly.js is a high-level, declarative charting library. plotly.js ships with over 20
 chart types, including scientific charts, 3D graphs, statistical charts, SVG maps, financial charts,
