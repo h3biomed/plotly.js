@@ -39233,7 +39233,7 @@ module.exports={
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/mapbox-gl/-/mapbox-gl-0.22.1.tgz",
+  "_resolved": "https://h3biomedicine.jfrog.io/h3biomedicine/api/npm/h3-npm/mapbox-gl/-/mapbox-gl-0.22.1.tgz",
   "_shasum": "92a965547d4c2f24c22cbc487eeda48694cb627a",
   "_shrinkwrap": null,
   "_spec": "mapbox-gl@^0.22.0",
@@ -39318,8 +39318,8 @@ module.exports={
   },
   "directories": {},
   "dist": {
-    "shasum": "92a965547d4c2f24c22cbc487eeda48694cb627a",
-    "tarball": "https://registry.npmjs.org/mapbox-gl/-/mapbox-gl-0.22.1.tgz"
+    "tarball": "https://h3biomedicine.jfrog.io/h3biomedicine/api/npm/h3-npm/mapbox-gl/-/mapbox-gl-0.22.1.tgz",
+    "shasum": "92a965547d4c2f24c22cbc487eeda48694cb627a"
   },
   "engines": {
     "node": ">=4.0.0"
@@ -40649,6 +40649,10 @@ process.off = noop;
 process.removeListener = noop;
 process.removeAllListeners = noop;
 process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
 
 process.binding = function (name) {
     throw new Error('process.binding is not supported');
